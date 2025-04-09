@@ -10,6 +10,6 @@ public interface TaskRepository extends MongoRepository<Task, String> {
 
     List<Task> findBySeverity(int severity);
 
-    @Query("{assignee: ?0}")
+    @Query("{ assignee: ?0 }")
     List<Task> getTaskByAssignee(String assignee);
 }
