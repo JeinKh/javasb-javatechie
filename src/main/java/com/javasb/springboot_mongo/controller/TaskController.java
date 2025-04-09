@@ -26,7 +26,7 @@ public class TaskController {
         return service.findAllTasks();
     }
 
-    @GetMapping("{/taskId}")
+    @GetMapping("/{taskId}")
     public Task getTask(@PathVariable String taskId){
         return service.getTaskByTaskId(taskId);
     }
@@ -46,7 +46,7 @@ public class TaskController {
         return service.updateTask(task);
     }
 
-    @DeleteMapping("{/taskId}")
+    @DeleteMapping("/{taskId}")
     public String deleteTask(@PathVariable String taskId){
         return service.deleteTask(taskId);
     }
